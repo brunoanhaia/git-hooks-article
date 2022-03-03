@@ -19,8 +19,17 @@ It allows custom actions to be performed at any stage of the versioning control 
 As [the hooks documentation](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) from git explained:
 > There are two groups of these hooks: client-side and server-side. Client-side hooks are triggered by operations such as committing and merging, while server-side hooks run on network operations such as receiving pushed commits. You can use these hooks for all sorts of reasons.
 
-
-
+### pre-commit hooks script
+```bash
+#!/usr/bin/env bash
+INPUT_FILE=$1
+START_LINE=`head -n1 $INPUT_FILE`
+PATTERN="^(PROJ)-[[:digit:]]+: "
+if ! [[ "$START_LINE" =~ $PATTERN ]]; then
+  echo "Bad commit message, see example: PROJ-123: commit message"
+  exit 1
+fi
+```
 
 
 
