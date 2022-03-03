@@ -1,6 +1,6 @@
-# Git hooks - The Article :rocket: 
+# Git hooks - The Article :rocket:
 
-## What are? Where they live? What they feed on? :confounded:	
+## What are? Where they live? What they feed on? :confounded:
 
 ### :crown: **Git**
 
@@ -20,6 +20,7 @@ As [the hooks documentation](https://git-scm.com/book/en/v2/Customizing-Git-Git-
 > There are two groups of these hooks: client-side and server-side. Client-side hooks are triggered by operations such as committing and merging, while server-side hooks run on network operations such as receiving pushed commits. You can use these hooks for all sorts of reasons.
 
 ### pre-commit hooks script
+
 ```bash
 #!/usr/bin/env bash
 INPUT_FILE=$1
@@ -31,9 +32,7 @@ if ! [[ "$START_LINE" =~ $PATTERN ]]; then
 fi
 ```
 
-
-
 ## References
 
-* [Atlassian CI/CI Git Hooks](https://www.atlassian.com/continuous-delivery/continuous-integration/git-hooks)
-* [Git (VCS) page](https://git-scm.com/)
+- [Atlassian CI/CI Git Hooks](https://www.atlassian.com/continuous-delivery/continuous-integration/git-hooks)
+- [Git (VCS) page](https://git-scm.com/)
